@@ -214,8 +214,8 @@ button {
 
 /* Projects Section */
 #projects {
-  background: black;
-  color: white;
+  background: #eee;
+  color: black;
 }
 
 .projects-grid {
@@ -245,10 +245,10 @@ button {
 
 /* Contact Section */
 #contact {
-  background: black;
+  background: #eee;
   padding: 40px 20px;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 #contact h2 {
@@ -261,7 +261,7 @@ button {
 }
 
 #contact a {
-  color: #f1f1f1;
+  color: black;
   text-decoration: none;
   font-weight: bold;
 }
@@ -331,16 +331,18 @@ button {
 
 .dark-mode #projects {
   background: #0F0F0F;
+  color: white;
 }
 
 .dark-mode .project-tile {
   background-color: white;
   color: white;
-  border-color: #444;
+  border-color: white;
 }
 
 .dark-mode #contact {
   background: #0F0F0F;
+  color: white;
 }
 
 .dark-mode #footer {
