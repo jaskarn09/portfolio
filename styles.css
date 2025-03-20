@@ -1,19 +1,26 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* Navbar */
 #navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #333;
-  color: white;
+  background-color: black;
+  color: #FAFAFA;
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
   box-sizing: border-box;
+  transition: background-color 0.3s;
+  border-bottom: 1px solid #888; /* Adjust color and thickness */
 }
 
 #navbar ul {
@@ -25,6 +32,10 @@ body {
 
 #navbar ul.left-nav {
   justify-content: flex-start;
+}
+.left-nav a {
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
 #navbar ul.right-nav {
@@ -41,12 +52,26 @@ body {
   text-decoration: none;
   padding: 14px 20px;
   display: block;
+  transition: color 0.3s;
+  height:  800%;
 }
 
 #navbar a:hover {
   background-color: #575757;
 }
 
+/* Theme Toggle Button */
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  transition: color 0.3s;
+  height: 40px;
+}
+
+/* Sections */
 section {
   padding: 60px 20px;
   text-align: center;
@@ -55,7 +80,7 @@ section {
 
 #welcome-section {
   height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1517423738875-5ce310acd3da?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("");
   background-size: cover;
   background-position: center;
   color: white;
@@ -66,9 +91,11 @@ section {
   text-align: center;
 }
 
-#welcome-section h1, #welcome-section .intro {
+#welcome-section h1,
+#welcome-section .intro {
   margin: 0;
   padding: 10px;
+  color: black;
 }
 
 #welcome-section h1 {
@@ -79,11 +106,13 @@ section {
   font-size: 1.2em;
 }
 
+/* About Section */
 #about {
   background: #eee;
   text-align: center;
 }
 
+/* Projects Section */
 #projects {
   background: #45567d;
   color: white;
@@ -114,6 +143,7 @@ section {
   color: black;
 }
 
+/* Contact Section */
 #contact {
   background: #45567d;
   padding: 40px 20px;
@@ -140,9 +170,10 @@ section {
   color: #ccc;
 }
 
+/* Footer */
 #footer {
-  background: #333;
-  color: white;
+  background: black;
+  color: #FAFAFA;
   padding: 40px 20px;
   text-align: center;
 }
@@ -164,8 +195,60 @@ section {
   text-decoration: underline;
 }
 
+/* Responsive Design */
 @media (max-width: 600px) {
   #navbar ul {
       flex-direction: column;
   }
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode #navbar {
+  background-color: black;
+}
+
+.dark-mode #navbar a {
+  color: white;
+}
+
+.dark-mode #navbar a:hover {
+  background-color: #575757;
+}
+
+.dark-mode #theme-toggle {
+  color: white;
+}
+
+.dark-mode #about {
+  background: #222;
+  color: white;
+}
+
+.dark-mode #projects {
+  background: #1b1b1b;
+}
+
+.dark-mode .project-tile {
+  background-color: #333;
+  color: white;
+  border-color: #444;
+}
+
+.dark-mode #contact {
+  background: #1b1b1b;
+}
+
+.dark-mode #footer {
+  background: #222;
+}
+.dark-mode #welcome-section h1{
+  color: white;
+}
+.dark-mode #welcome-section .intro{
+  color: white;
 }
