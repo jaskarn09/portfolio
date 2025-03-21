@@ -181,7 +181,7 @@ section {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 20px;
-  width: 200px;
+  width: 180px;
   margin: auto;
   margin-right: 5px;
 }
@@ -200,7 +200,7 @@ section {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 20px;
-  width: 200px;
+  width: 180px;
   box-shadow: 1px 2px 16px rgba(240, 235, 235, 0.2); /* Adds shadow */
   margin: auto;
   margin-left: 5px;
