@@ -13,25 +13,26 @@
         </ul>
 
         <ul class="right-nav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="nav-button">About</a></li>
+        <li><a href="#projects" class="nav-button">Projects</a></li>
+        <li><a href="#contact" class="nav-button">Contact</a></li>
             <li><button id="theme-toggle" style="background: none; border: none; font-size: 20px; cursor: pointer;">☀️</button></li>  
         </ul>
     </nav>
     
-    <section id="welcome-section">
-        <div class="circular-frame">
-            <img alt="Profile Image" fetchpriority="high" decoding="async" data-nimg="fill"
-                class="object-cover" src="images/my pic.jpg">
-        </div>        
-        <h1>Hi, I'm Jaskaran Singh</h1>
-        <p class="intro">I am a student.</p>
-        <div class="button-container">
-            <button onclick="location.href='#contact'" class="get-in-touch">Get in Touch</button>
-            <button onclick="location.href='#projects'" class="view-projects">View Projects</button>
-        </div>
-    </section>
+ <section id="welcome-section">
+    <div class="circular-frame animate-fade-in-fast">
+        <img alt="Profile Image" fetchpriority="high" decoding="async" data-nimg="fill"
+            class="object-cover" src="images/my pic.jpg">
+    </div>        
+    <h1 class="opacity-0 animate-fade-in-delay-1">Hi, I'm Jaskaran Singh</h1>
+    <p class="intro opacity-0 animate-fade-in-delay-2">I am a student.</p>
+    <div class="button-container opacity-0 animate-fade-in-delay-3">
+        <button onclick="location.href='#contact'" class="get-in-touch">Get in Touch</button>
+        <button onclick="location.href='#projects'" class="view-projects">View Projects</button>
+    </div>
+</section>
+
     
     <section id="about">
         <div class="absolute top-4 left-4 inline-flex items-center rounded-lg border-2 border-solid border-white bg-gray-800 px-4 py-2 h-10 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 text-white cursor-pointer">
@@ -44,14 +45,14 @@
                 <path d="M4 17v2"></path>
                 <path d="M5 18H3"></path>
             </svg>
-            About Me
-        </div>        
-             
-          <p>Being a ambitious student currently pursuing my B.E. in Electrical and Computer Engineering at "THAPAR INSTITUTE OF ENGINEERING AND TECHNOLOGY" of engineering and technology in Patiala.</p>
-        <p> I have a good academic foundation in C, C++,CSS, Python, and HTML.</p>
-        <p>I am basically an optimistic, enthusiastic learner, and always try to enhance my skills with internships, projects, and learning new programming languages.</p>
-        <p> I have also completed a 3-year diploma in electrical engineering in Jamshedpur and had the opportunity to do an internship at the sub-station of JUSNL.</p>
-    </section>
+        About Me
+<section class="about">
+<div class="about-container">
+<h1>Web Developer & Tech Enthusiast</h1>
+<p class="subtitle">Specializing in building responsive and interactive applications.</p>
+</div>
+</div>
+ </section>            
 
     <section id="projects">
         <h2>Projects</h2>
