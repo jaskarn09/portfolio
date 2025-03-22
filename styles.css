@@ -254,6 +254,62 @@ button {
   font-size: 2em;
   margin-bottom: 20px;
 }
+/* Grid Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px; /* Adjust the spacing */
+}
+
+.box {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  flex: 1; /* Make boxes flexible */
+  min-width: 300px; /* Prevents excessive shrinking */
+}
+
+/* Background Box - Left Side */
+.background {
+  grid-column: 1; /* Stays in the first column */
+  text-align: left;
+}
+
+/* Programming & Software Used - Right Side */
+.programming {
+  grid-column: 2; /* Stays in the second column */
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skill-tag {
+  background-color: #222; /* Dark background */
+  color: #fff; /* White text */
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 15px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.software {
+  grid-column: 2; /* Moves Software Used below Programming */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
 
 /* Projects Section */
 #projects {
