@@ -324,7 +324,6 @@ button {
   gap: 20px;
   padding: 20px;
 }
-
 .project-tile {
   background-color: #f1f1f1;
   padding: 20px;
@@ -341,33 +340,59 @@ button {
   margin-top: 10px;
   font-size: 1.2em;
   color: black;
+  
 }
 
-/* Contact Section */
-#contact {
+/* Certifications Section */
+#certifications {
   background: #eee;
   padding: 40px 20px;
   text-align: center;
   color: black;
+  margin: 0 20px 10px;
 }
 
-#contact h2 {
+#certifications h2 {
   font-size: 2em;
   margin-bottom: 20px;
 }
 
-#contact p {
-  font-size: 1.2em;
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
-#contact a {
+.certification {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.certification:hover {
+  transform: scale(1.05);
+}
+
+.certification img {
+  width: 40px; /* Adjust logo size */
+  height: auto;
+}
+
+.certification a {
   color: black;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1em;
 }
 
-#contact a:hover {
-  color: #ccc;
+.certification a:hover {
+  color: #007bff;
 }
 
 /* Footer */
@@ -375,31 +400,135 @@ button {
   background: black;
   color: #FAFAFA;
   padding: 40px 20px;
+  border-top: 1px solid #888;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 0; /* Ensure no additional padding is affecting positioning */
+  padding-right: 0;
+}
+
+.footer-left {
+  text-align: left;
+  position: absolute;
+  bottom: auto; /* Remove the bottom positioning */
+  left: 0;
+  padding-left: 20px; /* Add some padding from the left edge */
+  top: 0; /* Position it at the top of the footer */
+}
+
+.footer-left p:first-child {
+  font-weight: bold; /* Make "Portfolio" bold */
+  font-size: 1.2em; /* Make "Portfolio" slightly larger */
+  margin-bottom: 10px; /* Add space between "Portfolio" and the copyright */
+}
+
+.footer-left p:last-child {
+  color: #888; /* Make the copyright text slightly dimmer */
+  font-size: 0.9em; /* Make the copyright text slightly smaller */
+}
+.footer-left p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.footer-right {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#footer h2 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+#footer .footer-right p {
+  margin-bottom: 20px;
+  font-size: 1.2em;
 }
 
 #footer .social-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   margin-top: 20px;
 }
 
 #footer .social-links a {
-  color: white;
+  color: #888;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.8em;
+  transition: color 0.3s ease;
 }
 
 #footer .social-links a:hover {
-  text-decoration: underline;
+  color: white;
+  text-decoration: none;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-  #navbar ul {
-      flex-direction: column;
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
   }
+  
+  .footer-left {
+    position: static;
+    text-align: center;
+    margin-top: 30px;
+    order: 2;
+  }
+  
+  .footer-right {
+    order: 1;
+  }
+}
+/* scroll up */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+
+#scroll-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(43, 28, 28, 0.7);
+  color: #f0e3e3;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#scroll-btn i {
+  font-size: 18px;
+}
+
+#scroll-btn:hover {
+  background-color: rgba(27, 18, 18, 0.7);
+  box-shadow: 2px 4px 8px rgba(255, 255, 255, 0.4); /* White shadow */
+  color: #fcf5f5;
+}
+
+#scroll-btn.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Dark Mode Styles */
@@ -440,7 +569,7 @@ button {
   border-color: white;
 }
 
-.dark-mode #contact {
+.dark-mode #certifications {
   background: #0F0F0F;
   color: white;
 }
@@ -453,4 +582,8 @@ button {
 }
 .dark-mode #welcome-section .intro{
   color: white;
+}
+.dark-mode #scroll-btn {
+  background-color: rgba(247, 243, 243, 0.7);
+  color: #0f0e0e;
 }

@@ -34,4 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleButton.style.color = "black";
   }
 });
-
+// scroll up
+    // Get the button
+    const scrollBtn = document.getElementById("scroll-btn");
+    
+    // When the user scrolls down 300px from the top of the document, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollBtn.classList.add("visible");
+        } else {
+            scrollBtn.classList.remove("visible");
+        }
+    };
+    
+    // When the user clicks on the button, scroll to the top of the document
+    scrollBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });

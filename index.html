@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav id="navbar">
@@ -15,7 +16,7 @@
         <ul class="right-nav">
         <li><a href="#about" class="nav-button">About</a></li>
         <li><a href="#projects" class="nav-button">Projects</a></li>
-        <li><a href="#contact" class="nav-button">Contact</a></li>
+        <li><a href="#footer" class="nav-button">Contact</a></li>
             <li><button id="theme-toggle" style="background: none; border: none; font-size: 20px; cursor: pointer;">☀️</button></li>  
         </ul>
     </nav>
@@ -28,7 +29,7 @@
     <h1 class="opacity-0 animate-fade-in-delay-1">Hi, I'm Jaskaran Singh</h1>
     <p class="intro opacity-0 animate-fade-in-delay-2">I am a student.</p>
     <div class="button-container opacity-0 animate-fade-in-delay-3">
-        <button onclick="location.href='#contact'" class="get-in-touch">Get in Touch</button>
+        <button onclick="location.href='#footer'" class="get-in-touch">Get in Touch</button>
         <button onclick="location.href='#projects'" class="view-projects">View Projects</button>
     </div>
 </section>
@@ -108,48 +109,91 @@
         <div class="projects-grid">
             <div class="project-tile">
                 <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form" target="_blank">
-                    <img src="https://i.imgur.com/Jq26eCR.png" alt="Project 1">
+                    <img src="https://i.postimg.cc/cHWm6yys/Screenshot-2025-03-22-100142.png" alt="Project 1">
                     <div class="project-title">Project 1</div>
                 </a>
             </div>
             <div class="project-tile">
                 <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-tribute-page-project/build-a-tribute-page" target="_blank">
-                    <img src="https://i.imgur.com/LDLMHnz.png" alt="Project 2">
+                    <img src="https://i.postimg.cc/7hYnM3Zd/Screenshot-2025-03-22-100338.png" alt="Project 2">
                     <div class="project-title">Project 2</div>
                 </a>
             </div>
             <div class="project-tile">
                 <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-technical-documentation-page-project/build-a-technical-documentation-page" target="_blank">
-                    <img src="https://i.imgur.com/QbNOn9S.png" alt="Project 3">
+                    <img src="https://i.postimg.cc/vHTv4tj6/Screenshot-2025-03-22-100425.png" alt="Project 3">
                     <div class="project-title">Project 3</div>
                 </a>
             </div>
             <div class="project-tile">
                 <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-product-landing-page-project/build-a-product-landing-page" target="_blank">
-                    <img src="https://i.imgur.com/UuxWagL.png" alt="Project 4">
+                    <img src="https://i.postimg.cc/TPVVz7yB/Screenshot-2025-03-22-100752.png" alt="Project 4">
                     <div class="project-title">Project 4</div>
                 </a>
             </div>
         </div>
     </section>
     
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me through <a id="profile-link" href="https://www.linkedin.com/in/jaskaran-singh-8a42ab2b1" target="_blank">LinkedIn</a>.</p>
-        <div class="social-icons">
-            <a class="social-icon" href="mailto:jaskaran1192004@gmail.com" target="_blank">Send an email</a>
-            <a class="social-icon" href="tel:+9709038271" target="_blank">Call me</a>
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certifications-list">
+            <div class="certification">
+                <img src="https://static-00.iconduck.com/assets.00/freecodecamp-icon-2048x1381-57apvagh.png" alt="freeCodeCamp Logo">
+                <a href="https://www.freecodecamp.org/certification/fcc8242413c-d9a7-4e6f-bc4d-4ea5f4bc1a56/responsive-web-design" target="_blank">
+                    Responsive Web Design - freeCodeCamp
+                </a>
+            </div>
+            <div class="certification">
+                <img src="https://elementsofai.s3.amazonaws.com/_1200x630_crop_center-center_none/EOAIhero.png" alt="AI Logo">
+                <a href="images/elements-of-ai.jpg" target="_blank">
+                    Elements of AI - University of Helsinki
+                </a>
+            </div>
+            <div class="certification">
+                <img src="https://images.icon-icons.com/2642/PNG/512/google_cloud_logo_icon_159333.png" alt="CLOUD Logo">
+                <a href="https://www.credly.com/badges/b3b14928-5335-4ff5-a6fd-3243c0a88e70/linked_in_profile" target="_blank">
+                    Prompt Design in Vertex AI Skill Badge - Google Cloud
+                </a>
+            </div>
+            <div class="certification">
+                <img src="https://d8it4huxumps7.cloudfront.net/uploads/images/150x150/67dcf56e51b40_organisation_image-1BrzPjDJam1320514667iWaThxBhhp.png?d=200x200" alt="WORKSHOP Logo">
+                <a href="https://unstop.com/certificate-preview/ec3e9a2e-6a61-4103-a6a3-2ad79d103036" target="_blank">
+                    Web Development Workshop - LearnFusion
+                </a>
+            </div>
         </div>
     </section>
-
+    
     <section id="footer">
-        <h2>Let's work together...</h2>
-        <p>How do you take your coffee?</p>
-        <div class="social-links">
-            <a href="mailto:jaskaran1192004@gmail.com" target="_blank">Send a mail</a>
-            <a href="tel:+9709038271" target="_blank">Call me</a>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p><strong>Portfolio</strong></p>
+                <p>© 2025 Jaskaran Singh. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <h2>Let's work together...</h2>
+                <p>How do you take your coffee?</p>
+                <div class="social-links">
+                    <a href="https://github.com/jaskarn09" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jaskaran-singh-8a42ab2b1/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:jaskaran1192004@gmail.com" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-top">
+            <a href="#" id="scroll-btn">
+                <i class="fas fa-chevron-up"></i>
+            </a>
         </div>
     </section>
+    
     <script src="script.js"></script>
 </body>
 </html>
