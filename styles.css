@@ -695,6 +695,16 @@ button {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  /* Adjust the navbar title to be left-aligned on mobile */
+  .left-nav {
+    justify-content: flex-start; /* Move to the left instead of center */
+  }
+  
+  .left-nav a {
+    padding-left: 10px; /* Add some spacing from the left edge */
+    text-align: left;
+  }
 }
 
 /* Small screens */
@@ -728,6 +738,11 @@ button {
     justify-content: center;
   }
   
+  /* Override left-nav justification for small screens to keep it left-aligned */
+  .left-nav {
+    justify-content: flex-start;
+  }
+  
   /* Welcome section adjustments */
   #welcome-section h1 {
     font-size: 2em;
@@ -745,14 +760,18 @@ button {
   
   /* Button adjustments */
   .button-container {
-    flex-direction: column;
+    flex-direction: row !important; /* Keep buttons side by side */
+    justify-content: center;
     gap: 10px;
+    padding: 0 15px;
   }
   
   .get-in-touch, .view-projects {
-    width: 100%;
-    max-width: 250px;
-    margin: 5px auto;
+    width: 80%;
+    max-width: 200px;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 0; /* Remove existing margins */
   }
   
   /* Projects grid adjustments */
@@ -798,5 +817,35 @@ button {
   
   section {
     padding: 80px 20px;
+  }
+}
+/* Very large screens */
+@media (min-width: 1200px) {
+  .container, .projects-grid, .certifications-list {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  section {
+    padding: 80px 20px;
+  }
+}
+
+/* More specific navbar alignment fixes */
+@media (max-width: 768px) {
+  .left-nav {
+    justify-content: flex-start !important; /* Force left alignment */
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .left-nav a {
+    padding-left: 10px !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+  }
+  
+  #navbar {
+    padding-left: 5px;
   }
 }
