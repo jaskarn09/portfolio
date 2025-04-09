@@ -69,3 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             behavior: "smooth"
         });
     });
+
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.right-nav').classList.toggle('active');
+      });

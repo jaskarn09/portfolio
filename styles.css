@@ -8,6 +8,23 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Base font size for responsive typography */
+html {
+  font-size: 16px; /* Base font size */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Slightly smaller on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px; /* Even smaller on phones */
+  }
+}
+
 /* Navbar */
 #navbar {
   position: fixed;
@@ -73,6 +90,16 @@ body {
   padding: 5px;
 }
 
+/* Hamburger menu icon for mobile */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
 /* Sections */
 section {
   padding: 60px 20px;
@@ -116,7 +143,7 @@ section {
 }
 
 #welcome-section {
-  height: 70vh;
+  min-height: 70vh;
   background-position: center;
   color: white;
   display: flex;
@@ -166,7 +193,8 @@ section {
   justify-content: center; /* Center the buttons */
   align-items: center; /* Align them vertically */
   gap: 2px; /* Adjust spacing if needed */
-  width: 100%; /* Ensure they don’t stretch apart */
+  width: 100%; /* Ensure they don't stretch apart */
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
 }
 
 .get-in-touch {
@@ -259,6 +287,8 @@ button {
   justify-content: space-between;
   align-items: start;
   gap: 20px; /* Adjust the spacing */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .box {
@@ -266,7 +296,7 @@ button {
   padding: 20px;
   border-radius: 10px;
   color: white;
-  flex: 1; /* Make boxes flexible */
+  flex: 1 1 300px; /* More responsive flex basis with min width */
   min-width: 300px; /* Prevents excessive shrinking */
 }
 
@@ -301,14 +331,6 @@ button {
   grid-column: 2; /* Moves Software Used below Programming */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-}
-
-
 /* Projects Section */
 #projects {
   background: #eee;
@@ -321,6 +343,8 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .project-tile {
   background-color: #f1f1f1;
@@ -360,6 +384,8 @@ button {
   flex-direction: column;
   gap: 15px;
   align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .certification {
@@ -371,6 +397,7 @@ button {
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
+  width: 100%;
 }
 
 .certification:hover {
@@ -472,24 +499,6 @@ button {
   text-decoration: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .footer-left {
-    position: static;
-    text-align: center;
-    margin-top: 30px;
-    order: 2;
-  }
-  
-  .footer-right {
-    order: 1;
-  }
-}
 /* scroll up */
 .scroll-top {
   position: fixed;
@@ -626,4 +635,168 @@ button {
 .dark-mode #scroll-btn {
   background-color: rgba(247, 243, 243, 0.7);
   color: #0f0e0e;
+}
+
+/* RESPONSIVE DESIGN - Added Media Queries */
+
+/* Medium screens */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  #navbar {
+    padding: 0 15px;
+  }
+  
+  .left-nav a {
+    font-size: 1.3rem;
+  }
+  
+  /* Welcome section adjustments */
+  #welcome-section {
+    padding: 80px 15px;
+  }
+  
+  #welcome-section h1 {
+    font-size: 2.5em;
+  }
+  
+  #welcome-section .intro {
+    font-size: 1.1em;
+  }
+  
+  .circular-frame {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Container and box adjustments */
+  .container {
+    flex-direction: column;
+  }
+  
+  /* Footer adjustments */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-left {
+    position: static;
+    text-align: center;
+    margin-top: 30px;
+    order: 2;
+    padding-left: 0;
+  }
+  
+  .footer-right {
+    order: 1;
+  }
+  
+  /* Projects grid adjustments */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  /* Navbar mobile design */
+  #navbar {
+    height: auto;
+    padding: 10px 15px;
+  }
+  
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  
+  .right-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .right-nav.active {
+    display: flex;
+  }
+  
+  .left-nav, .right-nav {
+    justify-content: center;
+  }
+  
+  /* Welcome section adjustments */
+  #welcome-section h1 {
+    font-size: 2em;
+  }
+  
+  #welcome-section .intro {
+    font-size: 1em;
+    padding: 10px 5px;
+  }
+  
+  .circular-frame {
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Button adjustments */
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .get-in-touch, .view-projects {
+    width: 100%;
+    max-width: 250px;
+    margin: 5px auto;
+  }
+  
+  /* Projects grid adjustments */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  
+  /* Certification adjustments */
+  .certification {
+    padding: 8px 10px;
+  }
+  
+  .certification img {
+    width: 30px;
+  }
+  
+  /* Section padding adjustments */
+  section {
+    padding: 40px 10px;
+  }
+  
+  /* Footer adjustments */
+  #footer {
+    padding: 30px 10px;
+  }
+  
+  #footer .social-links {
+    gap: 20px;
+  }
+  
+  #footer h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* Very large screens */
+@media (min-width: 1200px) {
+  .container, .projects-grid, .certifications-list {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  section {
+    padding: 80px 20px;
+  }
 }
