@@ -98,6 +98,8 @@ html {
   cursor: pointer;
   background: none;
   border: none;
+  top: 20%; /* Center vertically */
+  transform: translateY(-20%); /* Perfect vertical centering */
 }
 
 /* Sections */
