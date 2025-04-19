@@ -291,6 +291,7 @@ button {
   gap: 20px; /* Adjust the spacing */
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 10px; /* Added padding to prevent edge touching */
 }
 
 .box {
@@ -299,7 +300,11 @@ button {
   border-radius: 10px;
   color: white;
   flex: 1 1 300px; /* More responsive flex basis with min width */
-  min-width: 300px; /* Prevents excessive shrinking */
+  min-width: 0; /* Remove min-width constraint that causes overflow */
+  max-width: 100%; /* Ensure box doesn't exceed container width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  overflow-wrap: break-word; /* Allow text to wrap */
+  word-wrap: break-word; /* For older browser support */
 }
 
 /* Background Box - Left Side */
@@ -317,6 +322,7 @@ button {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
+  max-width: 100%; /* Ensure proper wrapping */
 }
 
 .skill-tag {
@@ -328,9 +334,17 @@ button {
   display: inline-block;
   text-transform: uppercase;
   font-weight: bold;
+  margin-bottom: 8px; /* Added for better spacing when wrapped */
+  max-width: 100%; /* Ensure text doesn't overflow */
 }
 .software {
   grid-column: 2; /* Moves Software Used below Programming */
+}
+
+/* Ensure text wrapping and readability */
+.box p, .box h2, .box h3 {
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 /* Projects Section */
@@ -807,6 +821,23 @@ button {
   
   #footer h2 {
     font-size: 1.5em;
+  }
+  
+  /* Fix About section for mobile */
+  .container {
+    flex-direction: column;
+    padding: 0 5px;
+  }
+  
+  .box {
+    flex-basis: 100%;
+    margin: 0 0 15px 0;
+    width: 100%;
+  }
+  
+  /* Fix any potential grid issues */
+  .background, .programming, .software {
+    grid-column: auto; /* Remove specific grid positioning */
   }
 }
 
